@@ -1,3 +1,10 @@
+:root {
+  --mainColor: #333333;
+  --orange: #cc9933;
+  --gray: #999999;
+  --white: #fff;
+}
+
 @font-face {
   font-family: 'Muller';
   src: url(../fonts/MullerBold.woff) format('woff');
@@ -38,7 +45,7 @@ body {
   font-family: 'Muller', sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #333333;
+  color: var(--mainColor);
   font-weight: 400;
 }
 
@@ -75,7 +82,7 @@ ol {
 
 strong {
   font-size: 22px;
-  color: #333333;
+  color: var(--mainColor);
 }
 
 .container {
@@ -119,10 +126,12 @@ strong {
   font-size: 40px;
   line-height: 1;
   font-weight: 400;
-  color: #333333;
+  color: var(--mainColor);
 }
 
 .link {
+  display: inline-block;
+
   font-family: 'Muller', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -131,9 +140,13 @@ strong {
   text-decoration: none;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .btn {
   display: inline-block;
-  border: 1px solid #cc9933;
+  border: 1px solid var(--orange);
   border-radius: 12px;
   padding: 25px 30px;
   
@@ -141,13 +154,16 @@ strong {
   font-size: 16px;
   line-height: 1;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
 
-  background-color: #cc9933;
+  background-color: var(--orange);
+
+  transition: transform .1s linear;
 }
 
 .btn:hover {
   cursor: pointer;
+  transform: scale(1.04);
 }
 
 
@@ -161,9 +177,13 @@ strong {
 .header__intro {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 30px;
+}
+
+.header__intro > :first-child {
+  margin-right: auto;
 }
 
 .header__left {
@@ -171,7 +191,7 @@ strong {
   align-items: center;
 }
 
-.header__logo  {
+.header__logo {
   display: inline-block;
   margin-right: 25px;
   border-radius: 10px;
@@ -188,7 +208,7 @@ strong {
 
 .header__link:focus {
   outline: none;
-  border-bottom: 2px solid #333333;
+  border-bottom: 2px solid var(--mainColor);
 }
 
 .account__icon {
@@ -196,11 +216,11 @@ strong {
   height: 14px;
   width: 14px;
 
-  fill: #cc9933;
+  fill: var(--orange);
 }
 
 .account__link {
-  color: #cc9933;
+  color: var(--orange);
 }
 
 /* .account__btn {
@@ -212,7 +232,7 @@ strong {
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
-  color: #cc9933;
+  color: var(--orange);
   
   background: none;
 }
@@ -223,19 +243,23 @@ strong {
 
 .account__link:focus {
   outline: none;
-  border-bottom: 2px solid #cc9933;
+  border-bottom: 2px solid var(--orange);
 }
 
 .header__inner {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 11px 21px;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   border-radius: 12px;
 
-  background-color: #fff;
+  background-color: var(--white);
+}
+
+.header__inner > :first-child {
+  margin-right: auto;
 }
 
 .nav__list {
@@ -247,7 +271,7 @@ strong {
 }
 
 .nav__link {
-  color: #333333;
+  color: var(--mainColor);
 }
 
 .header__search {
@@ -274,18 +298,18 @@ strong {
   padding: 18px 50px 18px 20px;
 
   background-color: #f1f1f1;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   border-radius: 15px;
 
   font-family: 'Muller', sans-serif;
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
-  color: #333333;
+  color: var(--mainColor);
 }
 
 .search__input:focus {
-  outline-color: #333333;
+  outline-color: var(--mainColor);
 }
 
 .search__input::placeholder {
@@ -318,19 +342,19 @@ strong {
   width: 100%;
   padding: 26px 26px;
   margin-bottom: 24px;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   border-radius: 12px;
 
-  background-color: #fff;
+  background-color: var(--white);
 
   font-family: 'Muller', sans-serif;
   font-size: 16px;
-  color: #333333;
+  color: var(--mainColor);
   font-weight: 400;
 }
 
 .reservation__information-input::placeholder {
-  color: #999999;
+  color: var(--gray);
 }
 
 .reservation__content {
@@ -342,12 +366,12 @@ strong {
   margin-left: 30px;
 
   font-size: 16px;
-  color: #999999;
+  color: var(--gray);
   font-weight: 400;  
 }
 
 .reservation__content-text span {
-  color: #cc9933;
+  color: var(--orange);
 }
 
 .section-special {
@@ -372,13 +396,17 @@ strong {
   font-size: 66px;
   line-height: 1;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
 }
 
 .special__content {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+}
+
+.special__content > :first-child {
+  margin-right: auto;
 }
 
 .special__content-text {
@@ -427,7 +455,7 @@ strong {
   border-radius: 12px;
   overflow: hidden;
 
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .services__item.item-right {
@@ -457,13 +485,13 @@ strong {
 
   font-size: 22px;
   font-weight: 500;
-  color: #cc9933;
+  color: var(--orange);
 
   position: relative;
 }
 
 .services__icon {
-  stroke: #cc9933;
+  stroke: var(--orange);
 
   position: absolute;
   top: 2px;
@@ -484,7 +512,7 @@ strong {
   padding: 44px 45px 40px 44px;
   border-radius: 12px;
 
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .advantages-icon {
@@ -515,15 +543,19 @@ strong {
   border-radius: 12px;
   overflow: hidden;
 
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .placement__item.bg {
-  padding: 365px 40px 50px 40px;
+  padding: 52px 39px;
+  display: flex;
+  align-items: flex-end;
 
   background-image: url('../images/placement/41.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+
+  position: relative;
 }
 
 .placement__item.item-right {
@@ -553,8 +585,12 @@ strong {
 .placement__item-info {
   display: flex;
   margin-bottom: 15px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+}
+
+.placement__item-info > :first-child {
+  margin-right: auto;
 }
 
 .placement__item-price span{
@@ -575,31 +611,41 @@ strong {
 }
 
 .placement__item-place {
-  color: #999999;
+  color: var(--gray);
 }
 
 .placement__item-btn {
   margin-top: 20px;
   padding: 13px 20px;
 
-  color: #cc9933;
+  color: var(--orange);
 
   background: none;
 }
 
 .placement__item-link {
   font-size: 22px;
-  color: #fff;
+  color: var(--white);
 
-  position: relative;
+  /* position: relative; */
+}
+
+.placement__item-link::after {
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .placement__icon {
-  stroke: #fff;
+  stroke: var(--white);
 
-  position: absolute;
+  position: relative;
   top: 3px;
-  right: -20px;
+  left: 5px;
 }
 
 
@@ -617,7 +663,7 @@ strong {
   padding: 45px;
   border-radius: 12px;
 
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .contacts__address {
@@ -626,10 +672,14 @@ strong {
 
 .contacts__address-item {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding-top: 23px;
   padding-bottom: 20px;
   border-bottom: 1px solid #cccccc;
+}
+
+.contacts__address-item > :first-child {
+  margin-right: auto;
 }
 
 .contacts__address-item:first-child {
@@ -647,16 +697,16 @@ strong {
 
 .contacts__address-content {
   width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__address-content span {
-  color: #999999;
+  color: var(--gray);
 }
 
 .contacts__address-link  {
-  display: block;
-
-  color: #cc9933;
+  color: var(--orange);
   line-height: 1.5;
 }
 
@@ -665,7 +715,7 @@ strong {
 
   background: none;
 
-  color: #cc9933;
+  color: var(--orange);
 }
 
 .contacts__form {
@@ -707,13 +757,13 @@ strong {
   font-family: 'Muller', sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: #333333;
+  color: var(--mainColor);
   font-weight: 400;
 }
 
 .form__input::placeholder,
 .form__textarea::placeholder {
-  color: #999999;
+  color: var(--gray);
 }
 
 .form__textarea {
@@ -729,17 +779,21 @@ strong {
 
 .footer__inner {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 49px 49px;
   border-radius: 12px;
 
   color: #e6e6e6;
 
-  background-color: #333333;
+  background-color: var(--mainColor);
   background-image: url("../images/footer/Слой\ 27\ копия.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 734px bottom;
+}
+
+.footer__inner > *:not(:last-child) {
+  margin-right: auto;
 }
 
 .footer__text {
@@ -753,7 +807,7 @@ strong {
 }
 
 .text__link {
-  color: #cc9933;
+  color: var(--orange);
 }
 
 .footer__contacts {
@@ -774,15 +828,12 @@ strong {
 .contacts__link {
   display: block;
 
-  color: #cc9933;
+  color: var(--orange);
   line-height: 1.5;
 }
 
 .footer__logos {
   flex: 0 0 10%;
-}
-
-.footer__logos {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -798,3 +849,9 @@ strong {
   width: 25px;
   height: 25px;
 }
+
+/* 
+1. Переделать блок Placement - последний item
+настроить наведение на весь блок.
+2. переделать placement__item - последний - избавиться от padding
+*/
