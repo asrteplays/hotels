@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Hotels</title>
 </head>
@@ -189,41 +190,45 @@
 
     <!-- Reservation -->
     <div class="container reservation--container">
-      <section class="section-reservation">
-        <h3 class="section__title">Быстрая бронь</h3>
-        <form class="reservation__information" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-          <input class="reservation__information-input" required type="text" name="city" placeholder="Город">
-          <input class="reservation__information-input" required type="text" name="room" placeholder="Категория номера">
-          <input class="reservation__information-input" type="text" name="date" placeholder="Дата заселения">
-          <input class="reservation__information-input" type="text" name="nights" placeholder="Количество ночей">
-          <input class="reservation__information-input" type="text" name="guests" placeholder="Количество гостей">
-          <div class="reservation__content">  
-            <button class="reservation__content-btn btn" type="button">Найти номер</button>
-            <div class="reservation__content-text">
-              <span>9 756</span> предложений доступно
+      <div class="row">
+        <section class="section-reservation col-lg-5 mr-auto">
+          <h3 class="section__title">Быстрая бронь</h3>
+          <form class="reservation__information" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <input class="reservation__information-input" required type="text" name="city" placeholder="Город">
+            <input class="reservation__information-input" required type="text" name="room" placeholder="Категория номера">
+            <input class="reservation__information-input" type="text" name="date" placeholder="Дата заселения">
+            <input class="reservation__information-input" type="text" name="nights" placeholder="Количество ночей">
+            <input class="reservation__information-input" type="text" name="guests" placeholder="Количество гостей">
+            <div class="reservation__content">  
+              <button class="reservation__content-btn btn" type="button">Найти номер</button>
+              <div class="reservation__content-text">
+                <span>9 756</span> предложений доступно
+              </div>
             </div>
-          </div>
-        </form>
-      </section>
+          </form>
+        </section>
 
-      <section class="section-special">
-        <h3 class="section__title">Спецпредложение</h3>
-        <article class="article__special">
-          <h2 class="article__special-title">Номера категории люкс</h2>
-          <div class="special__content">
-            <div class="special__content-text">
-              от 5 000 р
+        <section class="section-special col-lg-6">
+          <h3 class="section__title">Спецпредложение</h3>
+          <article class="article__special">
+            <div class="row">
+              <div class="col-8">
+                <h2 class="article__special-title">Номера категории люкс</h2>
+                <div class="special__content">
+                  <div class="special__content-text">
+                    от 5 000 р
+                  </div>
+                  <a class="special__content-link link" href="#">Подробнее
+                    <svg class="special__icon hf-arrow-icon">
+                      <use xlink:href="#half-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div>
-              <a class="special__content-link link" href="#">Подробнее
-                <svg class="special__icon hf-arrow-icon">
-                  <use xlink:href="#half-arrow"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
+          </article>
+        </section>
+      </div>
     </div>
 
     <!-- About -->
@@ -240,72 +245,80 @@
     <section class="section">
       <div class="container">
         <h3 class="section__title">Услуги</h3>
-        <div class="services">
+        <div class="section-row row row-cols-2">
+          <div class="col">
+            <article class="services__item">
+              <div class="services__item-image">
+                <img class="img" src="assets/images/services/10.jpg" alt="Эксклюзивное обслуживание">
+              </div>
+              <div class="services__item-content">
+                <h4>
+                  <a class="services__content-link link" href="#">Эксклюзивное обслуживание
+                    <svg class="services__icon hf-arrow-icon">
+                      <use xlink:href="#half-arrow"></use>
+                    </svg>
+                  </a>
+                </h4>
+                <p>Равным образом постоянный количественный рост и сфера нашей активности</p>
+              </div>
+            </article>
+          </div>
 
-          <article class="services__item">
-            <div class="services__item-image">
-              <img class="img" src="assets/images/services/10.jpg" alt="Эксклюзивное обслуживание">
-            </div>
-            <div class="services__item-content">
-              <h4>
-                <a class="services__content-link link" href="#">Эксклюзивное обслуживание
-                  <svg class="services__icon hf-arrow-icon">
-                    <use xlink:href="#half-arrow"></use>
-                  </svg>
-                </a>
-              </h4>
-              <p>Равным образом постоянный количественный рост и сфера нашей активности</p>
-            </div>
-          </article>
+          <div class="col">
+            <article class="services__item">
+              <div class="services__item-image">
+                <img class="img" src="assets/images/services/15.jpg" alt="Аренда банкетных залов">
+              </div>
+              <div class="services__item-content">
+                <h4>
+                  <a class="services__content-link link" href="#">Аренда банкетных залов
+                    <svg class="services__icon hf-arrow-icon">
+                      <use xlink:href="#half-arrow"></use>
+                    </svg>
+                  </a>
+                </h4>
+                <p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.</p>
+              </div>
+            </article>
+          </div>
+        </div>
 
-          <article class="services__item">
-            <div class="services__item-image">
-              <img class="img" src="assets/images/services/15.jpg" alt="Аренда банкетных залов">
-            </div>
-            <div class="services__item-content">
-              <h4>
-                <a class="services__content-link link" href="#">Аренда банкетных залов
-                  <svg class="services__icon hf-arrow-icon">
-                    <use xlink:href="#half-arrow"></use>
-                  </svg>
-                </a>
-              </h4>
-              <p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.</p>
-            </div>
-          </article>
+        <div class="section-row row row-cols-2">
+          <div class="col">
+            <article class="services__item">
+              <div class="services__item-image">
+                <img class="img" src="assets/images/services/12.jpg" alt="Сауны, бассейны, бани, фитнес-залы">
+              </div>
+              <div class="services__item-content">
+                <h4>
+                  <a class="services__content-link link" href="#">Сауны, бассейны, бани, фитнес-залы
+                    <svg class="services__icon hf-arrow-icon">
+                      <use xlink:href="#half-arrow"></use>
+                    </svg>
+                  </a>
+                </h4>
+                <p>Не следует, однако забывать, что начало повседневной работы по формированию позиции</p>
+              </div>
+            </article>
+          </div>
 
-          <article class="services__item">
-            <div class="services__item-image">
-              <img class="img" src="assets/images/services/12.jpg" alt="Сауны, бассейны, бани, фитнес-залы">
-            </div>
-            <div class="services__item-content">
-              <h4>
-                <a class="services__content-link link" href="#">Сауны, бассейны, бани, фитнес-залы
-                  <svg class="services__icon hf-arrow-icon">
-                    <use xlink:href="#half-arrow"></use>
-                  </svg>
-                </a>
-              </h4>
-              <p>Не следует, однако забывать, что начало повседневной работы по формированию позиции</p>
-            </div>
-          </article>
-
-          <article class="services__item">
-            <div class="services__item-image">
-              <img class="img" src="assets/images/services/carlo-d-agnolo-aFxSh_l4fbY-unsplash.jpg" alt="Охраняемые автомобильные стоянки">
-            </div>
-            <div class="services__item-content">
-              <h4>
-                <a class="services__content-link link" href="#">Охраняемые автомобильные стоянки
-                  <svg class="services__icon hf-arrow-icon">
-                    <use xlink:href="#half-arrow"></use>
-                  </svg>
-                </a>
-              </h4>
-              <p>Не следует, однако забывать, что начало повседневной работы по формированию позиции</p>
-            </div>
-          </article>
-
+          <div class="col">
+            <article class="services__item">
+              <div class="services__item-image">
+                <img class="img" src="assets/images/services/carlo-d-agnolo-aFxSh_l4fbY-unsplash.jpg" alt="Охраняемые автомобильные стоянки">
+              </div>
+              <div class="services__item-content">
+                <h4>
+                  <a class="services__content-link link" href="#">Охраняемые автомобильные стоянки
+                    <svg class="services__icon hf-arrow-icon">
+                      <use xlink:href="#half-arrow"></use>
+                    </svg>
+                  </a>
+                </h4>
+                <p>Не следует, однако забывать, что начало повседневной работы по формированию позиции</p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -314,69 +327,94 @@
     <section class="section">
       <div class="container">
         <h3 class="section__title">Приемущества</h3>
-        <div class="advantages">
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#bathtub"></use>
-              </svg>
-              <p>Идейные соображения высшего порядка, а также постоянный количественный рост</p>
+        <div class="section-row row row-cols-4">
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#bathtub"></use>
+                </svg>
+                <div>Идейные соображения высшего порядка, а также постоянный количественный рост</div>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#hanger"></use>
-              </svg>
-              <p>Значимость этих проблем настолько очевидна, что вопрос остается открытым</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#hanger"></use>
+                </svg>
+                <p>Значимость этих проблем настолько очевидна, что вопрос остается открытым</p>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#heating"></use>
-              </svg>
-              <p>Таким образом реализация плановых заданий играет важную роль для понимания</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#heating"></use>
+                </svg>
+                <div>Таким образом реализация плановых заданий играет важную роль для понимания</div>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#hotel-key"></use>
-              </svg>
-              <p>Повседневная практика показывает, что сложившаяся структура организации</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#hotel-key"></use>
+                </svg>
+                <p>Повседневная практика показывает, что сложившаяся структура организации</p>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#parking"></use>
-              </svg>
-              <p>Равным образом рамки и место обучения кадров способствует подготовки сотрудника</p>
+        </div>
+        
+        <div class="section-row row row-cols-4">
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#parking"></use>
+                </svg>
+                <p>Равным образом рамки и место обучения кадров способствует подготовки сотрудника</p>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#reception"></use>
-              </svg>
-              <p>Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#reception"></use>
+                </svg>
+                <p>Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса</p>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#security-box"></use>
-              </svg>
-              <p>Повседневная практика показывает, что дальнейшее развитие различных форм</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#security-box"></use>
+                </svg>
+                <p>Повседневная практика показывает, что дальнейшее развитие различных форм</p>
+              </div>
             </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__item-content">
-              <svg class="advantages-icon">
-                <use xlink:href="#swimming-pool"></use>
-              </svg>
-              <p>Значимость этого настолько очевидна, что консультация наших экспертов помогает</p>
+
+          <div class="col">
+            <div class="advantages__item">
+              <div class="advantages__item-content">
+                <svg class="advantages-icon">
+                  <use xlink:href="#swimming-pool"></use>
+                </svg>
+                <p>Значимость этого настолько очевидна, что консультация наших экспертов помогает</p>
+              </div>
             </div>
           </div>
         </div>
@@ -387,256 +425,285 @@
     <section class="section">
       <div class="container">
         <h3 class="section__title">Размещение</h3>
-        <div class="placement">
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/23.jpg" alt="Lagoona española">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>4 698 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
+        <div class="section-row row row-cols-3">
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/23.jpg" alt="Lagoona española">
               </div>
-              <div class="placement__item-name">Lagoona española</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/24.jpg" alt="Lagoona son típicas">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>5 148 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>4 698 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
                 </div>
+                <div class="placement__item-name">Lagoona española</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
               </div>
-              <div class="placement__item-name">Lagoona son típicas</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/26.jpg" alt="Lagoona de la guerra">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 254 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona de la guerra</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/29.jpg" alt="Lagoona mentira piadosa">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 320 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona mentira piadosa</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/30.jpg" alt="Lagoona empujar la creatividad">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 457 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona empujar la creatividad</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/31.jpg" alt="Lagoona el retorno">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 490 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona el retorno</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/27.jpg" alt="Lagoona enfermo terminó">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 505 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona enfermo terminó</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
-            </div>
-          </div>
-          <div class="placement__item">
-            <div class="placement__item-image">
-              <img class="img" src="assets/images/placement/29.jpg" alt="Lagoona suerte siguió siempre">
-            </div>
-            <div class="placement__item-content">
-              <div class="placement__item-info">
-                <div class="placement__item-price"><span>от</span> <strong>6 824 р</strong> / ночь</div>
-                <div class="placement__item-stars">
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star"></use>
-                  </svg>
-                  <svg class="placement-icon">
-                    <use xlink:href="#star-white"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="placement__item-name">Lagoona suerte siguió siempre</div>
-              <div class="placement__item-place">Барселона, Испания</div>
-              <button class="placement__item-btn btn" type="button">Номера</button>
             </div>
           </div>
 
-          <div class="placement__item bg">
-            <h4>
-              <a class="placement__item-link link" href="#">Посмотреть все варианты
-                <svg class="placement__icon hf-arrow-icon">
-                  <use xlink:href="#half-arrow"></use>
-                </svg>
-              </a>
-            </h4>
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/24.jpg" alt="Lagoona son típicas">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>5 148 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona son típicas</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/26.jpg" alt="Lagoona de la guerra">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 254 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona de la guerra</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-row row row-cols-3">
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/29.jpg" alt="Lagoona mentira piadosa">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 320 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona mentira piadosa</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/30.jpg" alt="Lagoona empujar la creatividad">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 457 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona empujar la creatividad</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/31.jpg" alt="Lagoona el retorno">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 490 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona el retorno</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-row row row-cols-3">
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/27.jpg" alt="Lagoona enfermo terminó">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 505 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona enfermo terminó</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="placement__item">
+              <div class="placement__item-image">
+                <img class="img" src="assets/images/placement/29.jpg" alt="Lagoona suerte siguió siempre">
+              </div>
+              <div class="placement__item-content">
+                <div class="placement__item-info">
+                  <div class="placement__item-price"><span>от</span> <strong>6 824 р</strong> / ночь</div>
+                  <div class="placement__item-stars">
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="placement-icon">
+                      <use xlink:href="#star-white"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="placement__item-name">Lagoona suerte siguió siempre</div>
+                <div class="placement__item-place">Барселона, Испания</div>
+                <button class="placement__item-btn btn" type="button">Номера</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex">
+            <div class="placement__item bg">
+              <h4>
+                <a class="placement__item-link link" href="#">Посмотреть все варианты
+                  <svg class="placement__icon hf-arrow-icon">
+                    <use xlink:href="#half-arrow"></use>
+                  </svg>
+                </a>
+              </h4>
+            </div>
           </div>
         </div>
       </div>
@@ -646,42 +713,44 @@
     <section class="section-contacts">  
       <div class="container">
         <h3 class="section__title">Контакты</h3>
-        <div class="contacts">
-          <div class="contacts__inner">
-            <address class="contacts__address">
-              <div class="contacts__address-item">
-                <h4 class="contacts__address-title">Адрес</h4>
-                <div class="contacts__address-content">Москва, улица Юности, дом 5 строение 4, офис 2</div>
-              </div>
-              <div class="contacts__address-item">
-                <h4 class="contacts__address-title">Телефоны</h4>
-                <div class="contacts__address-content">
-                  <a href="tel:+74995356434" class="contacts__address-link link">+7 (499) 535-64-34</a>
-                  <a href="tel:+74950050544" class="contacts__address-link link">+7 (495) 005-05-44</a>
+        <div class="row align-items-center">
+          <div class="col-5">
+            <div class="contacts__inner">
+              <address class="contacts__address">
+                <div class="contacts__address-item">
+                  <h4 class="contacts__address-title">Адрес</h4>
+                  <div class="contacts__address-content">Москва, улица Юности, дом 5 строение 4, офис 2</div>
                 </div>
-              </div>
-              <div class="contacts__address-item">
-                <h4 class="contacts__address-title">E-mail</h4>
-                <div class="contacts__address-content">
-                  <div>  
-                    <a href="mailto:lg.oona@mail.ru" class="contacts__address-link link">lg.oona@mail.ru</a>
-                    <span>по вопросам бронирования</span>
-                  </div>
-                  <div>
-                    <a href="mailto:hotels.ln@mail.ru" class="contacts__address-link link">hotels.ln@mail.ru</a>
-                    <span>по вопросам сотрудничества</span>
+                <div class="contacts__address-item">
+                  <h4 class="contacts__address-title">Телефоны</h4>
+                  <div class="contacts__address-content">
+                    <a href="tel:+74995356434" class="contacts__address-link link">+7 (499) 535-64-34</a>
+                    <a href="tel:+74950050544" class="contacts__address-link link">+7 (495) 005-05-44</a>
                   </div>
                 </div>
-              </div>
-              <div class="contacts__address-item">
-                <h4 class="contacts__address-title">График</h4>
-                <div class="contacts__address-content">Понедельник - пятница, <br>с 10:0 до 19:00</div>
-              </div>
-            </address>
-            <button type="button" class="contacts__btn btn">Построить маршрут</button>
+                <div class="contacts__address-item">
+                  <h4 class="contacts__address-title">E-mail</h4>
+                  <div class="contacts__address-content">
+                    <div>  
+                      <a href="mailto:lg.oona@mail.ru" class="contacts__address-link link">lg.oona@mail.ru</a>
+                      <span>по вопросам бронирования</span>
+                    </div>
+                    <div>
+                      <a href="mailto:hotels.ln@mail.ru" class="contacts__address-link link">hotels.ln@mail.ru</a>
+                      <span>по вопросам сотрудничества</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__address-item">
+                  <h4 class="contacts__address-title">График</h4>
+                  <div class="contacts__address-content">Понедельник - пятница, <br>с 10:0 до 19:00</div>
+                </div>
+              </address>
+              <button type="button" class="contacts__btn btn">Построить маршрут</button>
+            </div>
           </div>
 
-          <div class="contacts__form">  
+          <div class="contacts__form col-4 ml-auto mr-auto">  
             <div class="contacts__form-group">
               <h3 class="section__title">Напишите нам</h3>
               <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="POST"> 
@@ -700,13 +769,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__inner">
-        <div class="footer__text">
+      <div class="footer__inner row no-gutters justify-content-between">
+        <div class="footer__text col-4">
           <p>&copy; 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»</p>
           <p>Представленная на сайте информация носит справочный характер<br> и не является публичной офертой</p>
           <a class="text__link link" href="#">Политика конфиденциальности</a>
         </div>
-        <address class="footer__contacts">
+        
+        <address class="footer__contacts col-4">
           <p>11710, улица Юности, дом 5 строение 4, офис 2</p>
           <div class="contacts__phones">
             <a class="contacts__link link" href="tel:+74995356434">+7 (499) 535-64-34</a>
@@ -717,7 +787,8 @@
             <a class="contacts__link link" href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a>
           </div>
         </address>
-        <div class="footer__logos">
+
+        <div class="footer__logos col-2">
           <a class="logos__link" href="#">
             <svg class="logos__social">
               <use xlink:href="#tripadvisor"></use>

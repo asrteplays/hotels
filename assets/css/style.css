@@ -85,13 +85,6 @@ strong {
   color: var(--mainColor);
 }
 
-.container {
-  max-width: 1168px;
-  width: 100%;
-  margin: 0 auto;
-  /* padding: 0 15px; */
-}
-
 .img {
   display: block;
   max-width: 100%;
@@ -116,6 +109,10 @@ strong {
 
 .section {
   padding-top: 67px;
+}
+
+.section-row:not(:first-child) {
+  margin-top: 30px;
 }
 
 .section__title {
@@ -177,7 +174,6 @@ strong {
 .header__intro {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 30px;
 }
@@ -223,24 +219,6 @@ strong {
   color: var(--orange);
 }
 
-/* .account__btn {
-  display: inline-block;
-  border: none;
-  padding: 0;
-
-  font-family: 'Muller', sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--orange);
-  
-  background: none;
-}
-
-.account__btn:hover {
-  cursor: pointer;
-} */
-
 .account__link:focus {
   outline: none;
   border-bottom: 2px solid var(--orange);
@@ -249,7 +227,6 @@ strong {
 .header__inner {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   padding: 11px 21px;
   border: 1px solid var(--white);
@@ -325,12 +302,7 @@ strong {
 
 /* Reservation */
 .reservation--container {
-  display: flex;
   padding-top: 70px;
-}
-
-.section-reservation {
-  width: 45%;
 }
 
 .reservation__information {
@@ -375,12 +347,15 @@ strong {
 }
 
 .section-special {
-  width: 55%;
-  margin-left: 55px;
+  display: flex;
+  flex-direction: column;
 }
 
 .article__special {
-  padding: 260px 235px 35px 45px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  padding: 34px 40px;
   border: 1px solid #f1f1f1;
   border-radius: 10px;
   overflow: hidden;
@@ -391,7 +366,7 @@ strong {
 }
 
 .article__special-title {
-  margin-bottom: 43px;
+  margin-bottom: 23px;
 
   font-size: 66px;
   line-height: 1;
@@ -401,12 +376,8 @@ strong {
 
 .special__content {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-}
-
-.special__content > :first-child {
-  margin-right: auto;
 }
 
 .special__content-text {
@@ -418,18 +389,17 @@ strong {
 
 .special__content-link {
   display: inline-block;
+  display: flex;
+  align-items: center;
+}
 
-  position: relative;
+.special__icon {
+  margin-left: 5px;
 }
 
 .special__content-link:focus {
   outline: none;
   border-bottom: 2px solid #ffcc66;
-}
-
-.special__icon {
-  position: absolute;
-  right: -15px;
 }
 
 
@@ -443,27 +413,11 @@ strong {
 
 
 /* Services */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .services__item {
-  flex: 1 0 calc(50% - 24px);
-  margin-right: 24px;
-  margin-bottom: 24px;
   border-radius: 12px;
   overflow: hidden;
 
   background-color: var(--white);
-}
-
-.services__item:nth-child(2n) {
-  margin-right: 0;
-}
-
-.services__item:nth-last-child(-n+2) {
-  margin-bottom: 0;
 }
 
 .services__item-image {
@@ -500,16 +454,8 @@ strong {
 
 
 /* Advantages */
-.advantages {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .advantages__item {
-  flex: 1 0 calc(25% - 22px);
-  margin-right: 22px;
-  margin-bottom: 24px;
-  padding: 44px 45px 40px 44px;
+  padding: 42px;
   border-radius: 12px;
 
   background-color: var(--white);
@@ -520,26 +466,9 @@ strong {
   height: 59px;
 }
 
-.advantages__item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.advantages__item:nth-last-child(-n+4) {
-  margin-bottom: 0;
-}
-
 
 /* Placement */
-.placement {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .placement__item {
-  flex: 1 0 calc(33% - 24px);
-  margin-right: 24px;
-  margin-bottom: 25px;
   border-radius: 12px;
   overflow: hidden;
 
@@ -556,14 +485,6 @@ strong {
   background-repeat: no-repeat;
 
   position: relative;
-}
-
-.placement__item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.placement__item:nth-last-child(-n+3) {
-  margin-bottom: 0;
 }
 
 .placement__item-image {
@@ -585,7 +506,6 @@ strong {
 .placement__item-info {
   display: flex;
   margin-bottom: 15px;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -626,8 +546,6 @@ strong {
 .placement__item-link {
   font-size: 22px;
   color: var(--white);
-
-  /* position: relative; */
 }
 
 .placement__item-link::after {
@@ -654,12 +572,7 @@ strong {
   padding-top: 67px;
 }
 
-.contacts {
-  display: flex;
-}
-
 .contacts__inner {
-  flex: 0 0 40%;
   padding: 45px;
   border-radius: 12px;
 
@@ -672,7 +585,6 @@ strong {
 
 .contacts__address-item {
   display: flex;
-  /* justify-content: space-between; */
   padding-top: 23px;
   padding-bottom: 20px;
   border-bottom: 1px solid #cccccc;
@@ -718,25 +630,16 @@ strong {
   color: var(--orange);
 }
 
-.contacts__form {
-  flex: 0 0 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .contacts__form h3 {
   padding-left: 0;
   margin-bottom: 35px;
 }
 
 .contacts__form-group {
-  width: 100%;
-  max-width: 342px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .form {
@@ -778,9 +681,7 @@ strong {
 }
 
 .footer__inner {
-  display: flex;
-  /* justify-content: space-between; */
-  padding: 49px 49px;
+  padding: 48px 49px;
   border-radius: 12px;
 
   color: #e6e6e6;
@@ -792,13 +693,7 @@ strong {
   background-position: 734px bottom;
 }
 
-.footer__inner > *:not(:last-child) {
-  margin-right: auto;
-}
-
 .footer__text {
-  flex: 0 0 calc(40% - 118px);
-
   color: #e6e6e6;
 }
 
@@ -811,8 +706,6 @@ strong {
 }
 
 .footer__contacts {
-  flex: 0 0 calc(50% - 118px);
-
   color: #e6e6e6;
   font-style: normal;
 }
@@ -833,7 +726,6 @@ strong {
 }
 
 .footer__logos {
-  flex: 0 0 10%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -850,8 +742,8 @@ strong {
   height: 25px;
 }
 
-/* 
-1. Переделать блок Placement - последний item
-настроить наведение на весь блок.
-2. переделать placement__item - последний - избавиться от padding
-*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
